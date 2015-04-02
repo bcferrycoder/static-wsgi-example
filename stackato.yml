@@ -1,0 +1,7 @@
+name: static-example
+framework:
+  type: python
+  runtime: python27
+# map two static directories
+processes:
+    web: $STACKATO_UWSGI --static-map /static=$HOME/static --static-map /bar=$HOME/sub
